@@ -111,7 +111,7 @@ img {
 }
 
 .header-contact {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -120,6 +120,12 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
+  align-items: center;
+}
+
+.icon-header {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .header-link:hover,
@@ -138,9 +144,19 @@ img {
 }
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  background-color: #2f303a;
+  background-color: #c4c4c4;
   padding: 200px 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/overlay.jpg");
 }
 
 .hero-title {
@@ -167,6 +183,7 @@ img {
   color: var(--other-text-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-btn:hover,
@@ -201,10 +218,21 @@ img {
   line-height: 1.71;
   color: var(--second-text-color);
 }
+.icon-sides {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background-color: var(--btn-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
 
 /*---------------Work---------------------*/
 .work-title,
-.team-title {
+.team-title,
+.client-title {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -247,6 +275,7 @@ img {
   line-height: 1.19;
   text-align: center;
   color: var(--second-text-color);
+  margin-bottom: 16px;
 }
 
 .team-list {
@@ -266,7 +295,67 @@ img {
 .team-list .item:nth-child(4n) {
   margin-right: 0;
 }
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+}
+.team-soc-item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+.team-soc-item:last-child {
+  margin-right: 0;
+}
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-soc-team {
+  fill: #afb1b8;
+}
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+}
+.team-soc-link:hover .icon-soc-team,
+.team-soc-link:focus .icon-soc-team {
+  fill: #ffffff;
+}
 
+/*-----------------Clients------------------*/
+.client-list {
+  display: flex;
+}
+.client-item {
+  margin-right: 30px;
+}
+.client-item:nth-child(6n) {
+  margin-right: 0;
+}
+.client-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  color: #afb1b8;
+}
+.icon-client {
+  fill: currentColor;
+}
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
 /*----------------Portfolio-----------------*/
 .btn-portfolio {
   font-family: inherit;
@@ -351,12 +440,25 @@ button.current {
   margin-bottom: 0;
 }
 
+.portfolio-list .item:hover,
+.portfolio-list .item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 /*------------------Footer------------------*/
 .footer {
   background-color: #2f303a;
 
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
+.address-contact {
+  margin-right: 70px;
 }
 .footer .logo {
   margin-bottom: 20px;
@@ -383,4 +485,39 @@ button.current {
 }
 .footer-list .item:last-child {
   margin-bottom: 0;
+}
+.footer-item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 14;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer-soc-list {
+  display: flex;
+}
+.footer-soc-item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+.footer-soc-item:last-child {
+  margin-right: 0;
+}
+.footer-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-soc-footer {
+  fill: #ffffff;
+}
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
 }
